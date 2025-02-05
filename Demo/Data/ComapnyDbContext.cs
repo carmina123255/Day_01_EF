@@ -20,5 +20,12 @@ namespace Demo.Data
 
         }
         public DbSet<Employee>? Employees { get; set; }
+        
+        public DbSet<Product>? Products { get; set; }
+       // public DbSet<Project>? Projects { get; set; }
+
+
+      
     }
 }
+

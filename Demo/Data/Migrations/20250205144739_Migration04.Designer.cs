@@ -4,6 +4,7 @@ using Demo.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Demo.Data.Migrations
 {
     [DbContext(typeof(ComapnyDbContext))]
-    partial class ComapnyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250205144739_Migration04")]
+    partial class Migration04
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,7 +44,7 @@ namespace Demo.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Employees", (string)null);
+                    b.ToTable("Employees");
                 });
 
             modelBuilder.Entity("Demo.Data.Product", b =>
@@ -65,7 +68,7 @@ namespace Demo.Data.Migrations
 
                     b.HasKey("Code");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Demo.Data.Project", b =>
@@ -85,7 +88,7 @@ namespace Demo.Data.Migrations
 
                     b.HasKey("PNo");
 
-                    b.ToTable("Projects", (string)null);
+                    b.ToTable("Projects");
                 });
 #pragma warning restore 612, 618
         }
