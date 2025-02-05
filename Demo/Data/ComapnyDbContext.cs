@@ -16,7 +16,7 @@ namespace Demo.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                .UseSqlServer("Server =.;Database =Company;Trusted_Connection =True ;");
+                .UseSqlServer("Server =.;Database =Company;Trusted_Connection =True ; Encrypt =True;TrustServerCertificate =true");
 
         }
         public DbSet<Employee>? Employees { get; set; }
