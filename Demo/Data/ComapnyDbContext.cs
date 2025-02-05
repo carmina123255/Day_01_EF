@@ -19,6 +19,6 @@ namespace Demo.Data
                 .UseSqlServer("Server =.;Database =Company;Trusted_Connection =True ;");
 
         }
-        public DbSet<Employee>Employees { get; set; }
+        public DbSet<Employee>? Employees { get; set; }
     }
 }
