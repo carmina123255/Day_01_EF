@@ -26,7 +26,7 @@ namespace Demo
 
             using ComapnyDbContext context = new ComapnyDbContext();
 
-            var employee=context.Employees.Where(E=>E.Id==1).FirstOrDefault();
+            
 
         }
     }
